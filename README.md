@@ -14,7 +14,7 @@ A tiny status line for [Claude Code](https://claude.com/claude-code) that shows 
 
 </div>
 
-## ✨ What it shows
+## What it shows
 
 | Bar | Meaning |
 | --- | --- |
@@ -24,7 +24,7 @@ A tiny status line for [Claude Code](https://claude.com/claude-code) that shows 
 
 Each bar has 10 cells, so one cell is about 10%.
 
-## 🚀 Install
+## Install
 
 ```bash
 git clone https://github.com/zangetsuo/claude-statusbar.git
@@ -36,7 +36,7 @@ The bar appears after the next reply in Claude Code.
 
 **Requirements:** `bash` and [`jq`](https://jqlang.github.io/jq/) (`brew install jq` on macOS, `sudo apt install jq` on Debian/Ubuntu).
 
-## 🔒 What the installer touches
+## What the installer touches
 
 - Copies `statusline-command.sh` to `~/.claude/`.
 - Sets the `statusLine` entry in `~/.claude/settings.json`. Every other setting stays as it is.
@@ -45,7 +45,7 @@ The bar appears after the next reply in Claude Code.
 
 The script only reads the JSON that Claude Code passes to status lines. It makes no network requests and reads no credentials.
 
-## 🎨 Customize
+## Customize
 
 Everything lives in `~/.claude/statusline-command.sh`:
 
@@ -55,11 +55,11 @@ Everything lives in `~/.claude/statusline-command.sh`:
 | Empty cell color | `38;5;240` |
 | Labels | `5h`, `Weekly`, `Context` near the end of the file |
 
-## 📝 Notes
+## Notes
 
 - The **5h** and **Weekly** bars need a Claude subscription plan and show up after the first reply of a session. Until then you see **Context** alone, or `usage: waiting for data`.
 - The default blue matches Claude Code's dark theme.
 
-## 🗑️ Uninstall
+## Uninstall
 
 Remove the `statusLine` entry from `~/.claude/settings.json` (or restore the backup the installer created), then delete `~/.claude/statusline-command.sh`.
